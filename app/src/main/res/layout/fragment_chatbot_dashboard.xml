@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:background="@color/background"
+    tools:ignore="missingPrefix">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/container_button_menu_utama">
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/recycler_view_main"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="5dp"
+            android:stackFromBottom="true"
+            android:transcriptMode="alwaysScroll">
+
+        </android.support.v7.widget.RecyclerView>
+
+    </FrameLayout>
+
+    <android.support.v7.widget.RecyclerView
+        android:layout_above="@+id/rl_sendPesan"
+        android:layout_marginTop="5dp"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/container_button_menu_utama"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="3dp"
+        android:elevation="3dp"/>
+
+<RelativeLayout
+    android:id="@+id/rl_sendPesan"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_alignParentBottom="true">
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/text_view_isi_message"
+        android:background="@drawable/bg_item_bubble_message"
+        android:paddingBottom="12dp"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        android:paddingTop="12dp"
+        android:textSize="16sp"
+        android:textColor="@android:color/black"
+        android:hint="Type here . ."
+        android:selectAllOnFocus="true"
+        android:layout_marginBottom="9dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_toStartOf="@+id/fab_message_kirim"
+        android:layout_toLeftOf="@+id/fab_message_kirim"
+        android:layout_alignParentLeft="true"
+        android:elevation="3dp"
+        fontPath="font/sanfran_reg.otf"/>
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/fab_message_kirim"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:src="@android:drawable/ic_menu_send"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginRight="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="9dp"
+        app:backgroundTint="@color/fab"
+        app:rippleColor="@color/colorPrimary"
+        android:elevation="3dp"
+        app:fabSize="mini"/>
+</RelativeLayout>
+
+</RelativeLayout>

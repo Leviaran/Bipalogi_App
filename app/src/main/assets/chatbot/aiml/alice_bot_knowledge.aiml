@@ -1,0 +1,359 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aiml version="1.0">
+
+<category>
+<pattern>PERKENALAN</pattern>
+<template>
+<random>
+<li>hallo, aku ALice, teman asistenmu belajar BIPA. Bolehkah saya tahu siapa namamu?</li>
+<li>Hai, perkenalkan nama saya alice, teman asistenmu belajar Bahasa. Siapakah namamu?</li>
+<li>Apa kabar pasti baik selalu, nama saya Alice, siapakah namamu?</li>
+</random>
+<think><set name="topic">perkenalan</set></think>
+</template>
+</category>
+
+<topic name="perkenalan">
+
+<category>
+<pattern> SAYA * </pattern>
+<template><srai>NAMA SAYA <star/></srai></template>
+</category>
+
+<category>
+<pattern> * </pattern>
+<template><srai>NAMA SAYA <star/></srai></template>
+</category>
+
+<category>
+<pattern>NAMA SAYA * </pattern>
+<template>
+Hai <set name="nama"><star/></set>. Kita akan belajar Bahasa Indonesia untuk penutur asing. Dari manakah asalmu?
+<oob>Malaysia , Thailand , China , Myanmar</oob> Kalau tidak ada coba ketik sendiri asal kamu
+</template>
+</category>
+
+<category>
+<that>
+lt oob gt Malaysia Thailand China Myanmar lt slash oob gt Kalau tidak ada coba ketik sendiri asal kamu
+</that>
+<pattern> * </pattern>
+<template>Wah, kamu berasal dari <star/>. Negeri yang indah. Apakah kamu siap belajar bahasa Indonesia bersama saya?
+<oob> Ya , Tidak </oob>
+</template>
+</category>
+
+<category>
+<that>lt oob gt Ya Tidak lt slash oob gt</that>
+<pattern> YA</pattern>
+<template>Silakan Buka tab menu Materi yang diatas untuk memilih materi</template>
+</category>
+
+<category>
+<that>lt oob gt Ya Tidak lt slash oob gt</that>
+<pattern> Tidak</pattern>
+<template>Yahh sayang sekali, tapi tetap semangat ya</template>
+</category>
+
+</topic>
+
+<!--///////////////////////////////////////// MENYAPA //////////////////////////////////////// -->
+
+<category>
+<pattern>MENYAPA</pattern>
+<template>
+Menyapa adalah kegiatan mengajak bercakap-cakap ketika kita bertemu orang lain, misalnya teman, guru, dan lain-lain.
+Ungkapan yang digunakan dalam menyapa antara lain:
+hai
+halo
+selamat pagi
+selamat siang
+selamat sore
+selamat malam
+<oob>
+Perhatikan contoh sederhana ini:
+A: Hai Linda, selamat pagi!
+B: Halo, selamat pagi!
+Apakah kamu mengerti?
+<dialog> Ya , Tidak </dialog>
+</oob>
+<think> <set name="topic">menyapa</set> </think>
+</template>
+</category>
+
+<topic name="menyapa">
+
+<category>
+<pattern>*</pattern>
+<template><srai>MENYAPA</srai></template>
+</category>
+
+<category>
+<that>lt oob gt Ya Tidak lt slash oob gt</that>
+<pattern> Ya </pattern>
+<template>
+Dalam menyapa, kita juga menanyakan kabar lawan bicara. Ungkapan menanyakan kabar antara lain:
+Bagaimana kabar Anda?
+Apa kabar?
+Bagaimana dengan Anda?
+Kita juga mengucapkan terima kasih ketika menanyakan kabar.
+
+Perhatikan contoh sederhana ini:
+A: Selamat siang, Lia. Apa kabar?
+B: Siang, Lili. Kabar saya baik, terima kasih. Bagaimana kabar Anda?
+A: Saya juga baik.
+Apakah kamu mengerti?
+<oob> Ya , Tidak , 1 </oob>
+</template>
+</category>
+
+<category>
+<that>lt oob gt Ya Tidak 1 lt slash oob gt</that>
+<pattern>Ya</pattern>
+<template>
+Untuk mengakhiri kegiatan menyapa, kita bisa menggunakan kalimat perpisahan seperti:
+Maaf
+Permisi
+Saya pamit
+Saya harus pergi
+Sampai jumpa
+Selamat tinggal
+
+Perhatikan contoh sederhana ini:
+A: Halo, Sonya. Apa kabar?
+B: Baik, Sinta. Bagaimana kabar Anda?
+A: Kabar saya baik, terima kasih.
+B: Maaf Sinta, saya harus pergi. Sampai jumpa.
+A: Ya, sampai jumpa.
+Apakah kamu mengerti?
+<oob> Ya , Tidak , 2 </oob>
+</template>
+</category>
+
+<category>
+<pattern>Tidak</pattern>
+<template>
+<random>
+<li> Yuk coba simak baik dan baca pelan-pelan lagi </li>
+<li> Jangan-jangan kamu tidak konsen, saya bantu fokus deh, coba baca pelan-pelan lagi</li>
+<li> Wah jangan patah semangat, yuk coba baca lagi nanti saya bantu </li>
+</random>
+</template>
+</category>
+
+<category>
+<that>lt oob gt Ya Tidak 2 lt slash oob gt</that>
+<pattern>Ya</pattern>
+<template>
+Baiklah, ayo mulai kuisnya!
+A: Selamat pagi. _________?
+B: Selamat pagi. Kabar saya baik, terima kasih.
+<oob> Terima kasih , Selamat tinggal , Apa kabar , Siapa namamu</oob>
+</template>
+</category>
+
+<category>
+<that>lt oob gt Terima kasih Selamat tinggal Apa kabar Siapa namamu lt slash oob gt</that>
+<pattern>APA KABAR</pattern>
+<template>
+Hebat, jawabanmu tepat sekali, yuk coba lagi yang ini.
+A: _____________. Bagaimana kabar Anda?
+B: Sore. Kabar saya baik, terima kasih.
+<oob> Terima kasih , Selamat sore , Saya harus pergi , Selamat datang </oob>
+</template>
+</category>
+
+<category>
+<that>lt oob gt Terima kasih Selamat tinggal Apa kabar Siapa namamu lt slash oob gt</that>
+<pattern> * </pattern>
+<template>Wah sayang sekali kurang tepat, jawaban yang benar adalah Apa kabar</template>
+</category>
+
+<category>
+<that>lt oob gt Terima kasih Selamat sore Saya harus pergi Selamat datang lt slash oob gt</that>
+<pattern>SELAMAT SORE</pattern>
+<template>Tepat sekali, wah keren, yuk lanjut lagi.
+A: Sudah sore saya pulang dulu. ___________.
+B: Ya, sampai jumpa.
+<oob> Terima kasih , Sampai jumpa , Selamat malam , Hallo </oob>
+</template>
+</category>
+
+<category>
+<that>lt oob gt Terima kasih Selamat sore Saya harus pergi Selamat datang lt slash oob gt</that>
+<pattern> * </pattern>
+<template>Wah sayang sekali kurang tepat, jawaban yang benar adalah Selamat sore</template>
+</category>
+
+<category>
+<that>lt oob gt Terima kasih Sampai jumpa Selamat malam Hallo lt slash oob gt</that>
+<pattern>SAMPAI JUMPA</pattern>
+<template>
+Sempurna sekali
+Selamat, kamu telah menyelesaikan materi menyapa.
+Silakan pilih materi lainnya.
+</template>
+</category>
+
+<category>
+<that>lt oob gt Terima kasih Sampai jumpa Selamat malam Hallo lt slash oob gt</that>
+<pattern> * </pattern>
+<template>Wah sayang sekali kurang tepat, jawaban yang benar adalah Sampai jumpa</template>
+</category>
+
+</topic>
+
+
+
+<category>
+<pattern>PHONE *</pattern>
+<template>Bersiap melakukan panggilan <oob> <dial> <star></star> </dial> </oob></template>
+</category>
+
+<category>
+<pattern>CALL</pattern>
+<template><oob><dial></dial></oob></template>
+</category>
+
+
+<category>
+<pattern>CALL 911</pattern>
+<template>Responding to 911 with your location.
+<oob><dial>911</dial></oob>
+</template>
+</category>
+
+<category>
+<pattern>CALL 411</pattern>
+<template>Calling directory assistance with your location: <get name="location"/>.
+<oob><dial>411</dial></oob>
+</template>
+</category>
+
+
+<category>
+<pattern>CALL *</pattern>
+<template>
+<think>
+<set name="whoamicalling"><person/></set>
+<set name="phonenumber">UNKNOWN</set>
+<set name="defaultnumber"><srai>XPHONE <star/> NUMBER</srai></set>
+<set name="mobilenumber"><srai>XPHONE <star/> MOBILE NUMBER</srai></set>
+<set name="homenumber"><srai>XPHONE <star/> HOME NUMBER</srai></set>
+<set name="worknumber"><srai>XPHONE <star/> WORK NUMBER</srai></set>
+<set name="dmh"><get name="defaultnumber"/> <get name="mobilenumber"/> <get name="homenumber"/></set>
+<set name="dmw"><get name="defaultnumber"/> <get name="mobilenumber"/> <get name="worknumber"/></set>
+<set name="dhw"><get name="defaultnumber"/> <get name="homenumber"/> <get name="worknumber"/></set>
+<set name="mhw"><get name="mobilenumber"/> <get name="homenumber"/> <get name="worknumber"/></set>
+<set name="dmhw"><get name="defaultnumber"/> <get name="mobilenumber"/> <get name="homenumber"/> <get name="worknumber"/></set>
+</think>
+
+<condition name="dmhw">
+<li value="UNKNOWN UNKNOWN UNKNOWN UNKNOWN"><think><set name="phonenumber">NEW</set></think></li>
+
+<li>
+<condition name="dmh">
+<li value="UNKNOWN UNKNOWN UNKNOWN"><think><set name="phonenumber"><get name="worknumber"/></set></think></li>
+</condition>
+<condition name="dmw">
+<li value="UNKNOWN UNKNOWN UNKNOWN"><think><set name="phonenumber"><get name="homenumber"/></set></think></li>
+</condition>
+<condition name="dhw">
+<li value="UNKNOWN UNKNOWN UNKNOWN"><think><set name="phonenumber"><get name="mobilenumber"/></set></think></li>
+</condition>
+<condition name="mhw">
+<li value="UNKNOWN UNKNOWN UNKNOWN"><think><set name="phonenumber"><get name="defaultnumber"/></set></think></li>
+</condition>
+</li>
+</condition>
+
+<condition name="phonenumber">
+<li value="NEW"><think><set name="function">call <star/></set></think><srai>addnewcontact <star/></srai></li>
+<li value="UNKNOWN"><srai>CALLMULTIPLE</srai></li>
+<li><srai>callnumber</srai></li>
+</condition>
+
+</template>
+</category>
+
+<category>
+<pattern>CALLMULTIPLE</pattern>
+<template>I have the following numbers for <get name="whoamicalling"/>.<br/><br/>
+<condition name="defaultnumber">
+<li value="UNKNOWN"></li>
+<li>Main - <get name="defaultnumber"/>.<br/></li>
+</condition>
+<condition name="mobilenumber">
+<li value="UNKNOWN"></li>
+<li>Mobile - <get name="mobilenumber"/>.<br/></li>
+</condition>
+<condition name="homenumber">
+<li value="UNKNOWN"></li>
+<li>Home - <get name="homenumber"/>.<br/></li>
+</condition>
+<condition name="worknumber">
+<li value="UNKNOWN"></li>
+<li>Work - <get name="worknumber"/>.<br/></li>
+</condition>
+<br/>Which number do you want to use?
+</template>
+</category>
+
+<category>
+<pattern>MAIN</pattern>
+<that>WHICH NUMBER DO YOU WANT TO USE</that>
+<template>
+<think><set name="phonenumber"><get name="mobilenumber"/></set></think><srai>CALLNUMBER</srai>
+</template>
+</category>
+
+<category>
+<pattern>MOBILE</pattern>
+<that>WHICH NUMBER DO YOU WANT TO USE</that>
+<template>
+<think><set name="phonenumber"><get name="mobilenumber"/></set></think><srai>CALLNUMBER</srai>
+</template>
+</category>
+
+<category>
+<pattern>HOME</pattern>
+<that>WHICH NUMBER DO YOU WANT TO USE</that>
+<template>
+<think><set name="phonenumber"><get name="homenumber"/></set></think><srai>CALLNUMBER</srai>
+</template>
+</category>
+
+<category>
+<pattern>WORK</pattern>
+<that>WHICH NUMBER DO YOU WANT TO USE</that>
+<template>
+<think><set name="phonenumber"><get name="worknumber"/></set></think><srai>CALLNUMBER</srai>
+</template>
+</category>
+
+<category>
+<pattern>*</pattern>
+<that>WHICH NUMBER DO YOU WANT TO USE</that>
+<template>
+That wasn't one of the choices. Let me remind you:<br/><srai>CALLMULTIPLE</srai>
+</template>
+</category>
+
+
+<category>
+<pattern>CALLNUMBER</pattern>
+<template>
+<condition name="phonenumber">
+<li value="UNKNOWN">Error: No phone number chosen to dial.</li>
+<li>
+Now dialing <get name="whoamicalling"/> on <get name="phonenumber"/>...
+<oob><dial><get name="phonenumber"/></dial></oob>
+</li>
+</condition>
+
+</template>
+</category>
+
+
+
+</aiml>

@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="colorStatusBar1">#8e24aa</color>
+    <color name="colorStatusBar2">#f4511e</color>
+    <color name="colorStatusBar3">#1e88e5</color>
+
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
+    <color name="colorActionbar">#FFEA00</color>
+
+    <color name="background">#e6eae9</color>
+    <color name="fab">#1fb6a2</color>
+    <color name="txt_message">#c11b1b1b</color>
+
+    <!--splash screen background color-->
+    <color name="bg_screen1">#f64c73</color>
+    <color name="bg_screen2">#20d2bb</color>
+    <color name="bg_screen3">#3395ff</color>
+    <color name="bg_screen4">#c873f4</color>
+
+    <!--splash screen dots inactive-->
+
+    <color name="dot_dark_screen1">#F58655</color>
+    <color name="dot_dark_screen2">#512DA8</color>
+    <color name="dot_dark_screen3">#4BCEF4</color>
+    <color name="dot_dark_screen4">#a854d4</color>
+
+    <!--splash screen dots active-->
+
+    <color name="dot_light_screen1">#f98da5</color>
+    <color name="dot_light_screen2">#8cf9eb</color>
+    <color name="dot_light_screen3">#93c6fd</color>
+    <color name="dot_light_screen4">#e4b5fc</color>
+
+
+</resources>

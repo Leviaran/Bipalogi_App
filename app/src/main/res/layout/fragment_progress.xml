@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:ignore="missingPrefix">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"/>
+
+    <ImageView
+        android:id="@+id/img_avatar"
+        android:layout_gravity="center"
+        android:layout_width="150dp"
+        android:layout_height="150dp" />
+
+    <TableLayout
+        android:layout_marginTop="25dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/score_text_calculate"
+            android:text="23"
+            android:textSize="75sp"
+            android:textAlignment="center"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textStyle="bold"
+            fontPath="font/sanfran_bold.otf" />
+
+        <TextView
+            android:text="Kata yang sudah dituliskan"
+            android:textAlignment="center"
+            android:textSize="15sp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            fontPath="font/sanfran_reg.otf"/>
+
+        <View
+            android:layout_marginTop="20dp"
+            android:layout_width="100dp"
+            android:layout_height="1dp"
+            android:background="@android:color/darker_gray"/>
+
+        <TableRow
+            android:layout_marginTop="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center_horizontal">
+
+            <LinearLayout
+
+                android:layout_weight="1"
+                android:layout_marginTop="30dp"
+                android:orientation="vertical"
+                android:gravity="center">
+                <TextView
+                    android:id="@+id/score_jawab_text_benar"
+                    android:text="23"
+                    android:textSize="50sp"
+                    android:textAlignment="center"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textStyle="bold"
+                    fontPath="font/sanfran_bold.otf" />
+
+                <TextView
+                    android:text="Menjawab Benar"
+                    android:textAlignment="center"
+                    android:textSize="15sp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    fontPath="font/sanfran_reg.otf"/>
+            </LinearLayout>
+
+            <View
+                android:layout_marginTop="20dp"
+                android:layout_width="1dp"
+                android:layout_height="match_parent"
+                android:background="@android:color/darker_gray"/>
+
+            <LinearLayout
+                android:layout_marginTop="30dp"
+                android:layout_weight="2"
+                android:orientation="vertical"
+                android:gravity="center">
+                <TextView
+                    android:id="@+id/score_jawab_mencoba_menjawab"
+                    android:text="23"
+                    android:textSize="50sp"
+                    android:textAlignment="center"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textStyle="bold"
+                    fontPath="font/sanfran_bold.otf" />
+
+                <TextView
+                    android:text="Materi"
+                    android:textAlignment="center"
+                    android:textSize="15sp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    fontPath="font/sanfran_reg.otf"/>
+            </LinearLayout>
+
+        </TableRow>
+
+
+    </TableLayout>
+
+</LinearLayout>

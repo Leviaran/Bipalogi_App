@@ -1,0 +1,23 @@
+<tabs>
+    <tab
+        id="@+id/tab_chat_dashboard"
+        icon="@drawable/ic_chatbot_dashboard"
+        title="Pesan"
+        inActiveColor="#ffffff"
+        activeColor="#ffffff"
+        barColorWhenSelected="#8e24aa" />
+    <tab
+        id="@+id/tab_pilih_materi"
+        icon="@drawable/ic_materi_dashboard"
+        title="Materi"
+        inActiveColor="#ffffff"
+        activeColor="#ffffff"
+        barColorWhenSelected="#f4511e" />
+    <tab
+        id="@+id/tab_progress"
+        icon="@drawable/ic_progress_dashboard"
+        title="Progress"
+        inActiveColor="#ffffff"
+        activeColor="#ffffff"
+        barColorWhenSelected="#1e88e5"/>
+</tabs>

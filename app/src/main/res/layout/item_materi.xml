@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="60dp"
+    android:layout_marginTop="3dp"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="?android:attr/selectableItemBackground"
+    android:clickable="true"
+    android:focusable="true"
+    tools:ignore="missingPrefix">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/item_image_materi"
+            android:layout_centerVertical="true"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:src="@drawable/ic_bubble"
+            android:tint="@color/dot_light_screen1"/>
+
+        <TextView
+            android:id="@+id/item_textView_materi"
+            android:layout_toRightOf="@+id/item_image_materi"
+            android:layout_toEndOf="@+id/item_image_materi"
+            android:layout_width="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:text="Materi 1"
+            android:textSize="23sp"
+            android:layout_height="wrap_content"
+            fontPath="font/sanfran_reg.otf"/>
+
+        <Button
+            android:id="@+id/item_button_materi"
+            android:layout_centerVertical="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_width="70dp"
+            android:layout_height="35dp"
+            android:text="@string/mulai"
+            android:layout_marginRight="10dp"
+            android:textColor="@android:color/white"
+            android:background="@drawable/button_yes_background"
+            fontPath="font/sanfran_reg.otf"
+            android:textAllCaps="false"/>
+
+
+
+    </RelativeLayout>
+
+</android.support.v7.widget.CardView>
