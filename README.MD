@@ -1,10 +1,12 @@
-<p align="center">
+# Bipalogi App
+
+<p align="left">
   <img src="https://github.com/Leviaran/Bipalogi_App/blob/master/readme_asset/Chatbot.png" alt="chatbot" width="200px">
   <img src="https://github.com/Leviaran/Bipalogi_App/blob/master/readme_asset/showchase.png" alt="showcase" width="200px">
   <img src="https://github.com/Leviaran/Bipalogi_App/blob/master/readme_asset/Materi.png" alt="material" width="200px">
 </p>
 
-# Bipalogi App
+
 Bipalogi App is an offline Chatbot-based Media Learning app. This application is for anyone who wants to learn Indonesian from basic. Especially for foreign citizens new to know and learn Indonesian from basic. With dialogue with Alice Pesert can be expected to interact with participants who speak native languages vocabulary or learning motivation will increase.Bipalogi App is chatbot app that you can interact with bot. This for educational only, the purpose of this app for learning media Bahasa Indonesia for Darmasiswa UNY beginner level. Chatbot machine use Pattern Based, knowledge by Artificial Intelegence Markup Language(AIML) ALice Project. 
 
 ### Component
